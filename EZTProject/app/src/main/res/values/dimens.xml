@@ -180,4 +180,5 @@
     <dimen name="inc_dp_340">340.0dip</dimen>
     <dimen name="inc_dp_316">316.0dip</dimen>
     <dimen name="inc_dp_400">400.0dip</dimen>
+    <dimen name="icome_gv_horspace">3dp</dimen>
 </resources>

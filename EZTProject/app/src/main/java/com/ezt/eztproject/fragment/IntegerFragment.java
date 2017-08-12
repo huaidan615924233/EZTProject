@@ -1,31 +1,48 @@
 package com.ezt.eztproject.fragment;
 
-import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.ezt.eztproject.EZTBaseFragment;
 import com.ezt.eztproject.R;
 
 /**
  * Created by Sunshine on 2017/7/31.
  */
 
-public class IntegerFragment extends Fragment {
-    private View mView;
+public class IntegerFragment extends EZTBaseFragment {
     @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
+    protected void initView() {
     }
 
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        if (mView == null)
-            mView = inflater.inflate(R.layout.fragment_index,null,false);
+    protected void getData() {
+    }
+
+    @Override
+    protected void setListener() {
+
+    }
+
+    @Override
+    protected View setView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        if (mView == null) {
+            mView = inflater
+                    .inflate(R.layout.fragment_index, container, false);
+
+        } else {
+            if (mView.getParent() != null) {
+                ((ViewGroup) mView.getParent()).removeView(mView);
+            }
+        }
         return mView;
+    }
+
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+
     }
 }

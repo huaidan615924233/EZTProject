@@ -13,7 +13,7 @@
         android:layout_centerVertical="true"
         android:layout_gravity="center"
         android:layout_marginLeft="@dimen/inc_dp_10"
-        android:background="@drawable/e_shape_actionbar_back"
+        android:src="@mipmap/btn_back_normal"
         android:visibility="visible" />
 
     <ImageView

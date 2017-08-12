@@ -9,14 +9,15 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="@color/san_bg"
-        android:orientation="horizontal" >
+        android:layout_gravity="center"
+        android:orientation="horizontal">
 
         <RelativeLayout
             android:id="@+id/btn_e_san_pre"
             android:layout_width="fill_parent"
-            android:layout_height="@dimen/inc_dp_172"
+            android:layout_height="@dimen/inc_dp_200"
             android:layout_gravity="center"
-            android:layout_weight="1.0" >
+            android:layout_weight="1.0">
 
             <ImageView
                 android:id="@+id/scan_code"
@@ -42,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/scan_code_hint"
                 android:layout_marginTop="@dimen/inc_dp_2"
-                android:gravity="center" >
+                android:gravity="center">
 
                 <LinearLayout
                     android:id="@+id/driver_count_limit"
@@ -52,7 +53,7 @@
                     android:layout_centerHorizontal="true"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    android:visibility="visible" >
+                    android:visibility="visible">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -75,7 +76,7 @@
                     android:layout_below="@+id/driver_count_limit"
                     android:layout_centerHorizontal="true"
                     android:gravity="center"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/yu_e_pre"
@@ -98,9 +99,9 @@
         <RelativeLayout
             android:id="@+id/btn_e_pay_pre"
             android:layout_width="fill_parent"
-            android:layout_height="@dimen/inc_dp_172"
+            android:layout_height="@dimen/inc_dp_200"
             android:layout_gravity="center"
-            android:layout_weight="1.0" >
+            android:layout_weight="1.0">
 
             <ImageView
                 android:id="@+id/btn_e_pay"

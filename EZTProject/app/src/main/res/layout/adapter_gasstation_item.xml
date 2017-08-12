@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/inc_item_background"
+    android:orientation="vertical"
+    android:paddingTop="5.0dip" >
+
+    <LinearLayout
+        android:id="@id/coupons_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bk_card001"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/inc_dp_50">
+
+            <TextView
+                android:id="@id/e_gasstion_local"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/inc_dp_10"
+                android:gravity="center_vertical"
+                android:textColor="@color/e_a_order"
+                android:textSize="@dimen/inc_dp_14" />
+
+            <TextView
+                android:id="@id/a_gasstion_info_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/inc_dp_10"
+                android:drawableLeft="@drawable/icon_jiaqi"
+                android:drawablePadding="@dimen/inc_dp_10"
+                android:gravity="center_vertical"
+                android:text="百度加气站"
+                android:textColor="@color/inc_black"
+                android:textSize="@dimen/inc_dp_16" />
+
+            <TextView
+                android:id="@id/a_gasstion_is_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/inc_dp_5"
+                android:layout_toRightOf="@id/a_gasstion_info_name"
+                android:background="@drawable/shape_gasstation_state"
+                android:padding="2.0dip"
+                android:text="暂停营业"
+                android:textColor="@color/white"
+                android:textSize="@dimen/inc_dp_10"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/inc_dp_0_5"
+            android:layout_marginLeft="@dimen/inc_dp_10"
+            android:background="@color/page_content" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/inc_dp_10"
+            android:layout_marginTop="@dimen/inc_dp_10"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/inc_dp_30">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/inc_dp_5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@id/e_gas_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="center_vertical"
+                    android:drawableLeft="@drawable/ic_phone2"
+                    android:drawablePadding="@dimen/inc_dp_10"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/e_text_p_info"
+                    android:textSize="@dimen/inc_dp_15" />
+
+                <TextView
+                    android:id="@id/e_take_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/inc_dp_10"
+                    android:layout_marginRight="@dimen/inc_dp_10"
+                    android:background="@drawable/e_pay_select_bg"
+                    android:padding="@dimen/inc_dp_5"
+                    android:text="@string/e_take_phone"
+                    android:textColor="@color/deal_complete_next"
+                    android:textSize="@dimen/inc_dp_15"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/inc_dp_10"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@id/e_gas_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="40.0dip"
+                    android:drawableLeft="@drawable/ic_add2"
+                    android:drawablePadding="@dimen/inc_dp_10"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/e_text_p_info"
+                    android:textSize="@dimen/inc_dp_15" />
+
+                <ImageButton
+                    android:id="@id/e_gas_goto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5.0dip"
+                    android:background="@drawable/shape_go_gas"
+                    android:focusable="false"
+                    android:gravity="center_vertical" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
