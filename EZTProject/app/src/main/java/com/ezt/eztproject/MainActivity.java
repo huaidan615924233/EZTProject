@@ -1,9 +1,9 @@
 package com.ezt.eztproject;
 
 import android.graphics.Color;
-import android.support.v4.app.FragmentTabHost;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTabHost;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -15,8 +15,8 @@ import com.ezt.eztproject.fragment.MainFragment;
 import com.ezt.eztproject.fragment.MineFragment;
 import com.ezt.eztproject.fragment.StationFragment;
 
-public class MainActivity extends AppCompatActivity {
-    private FragmentTabHost mTabHost;
+public class MainActivity extends FragmentActivity {
+    public FragmentTabHost mTabHost;
     private TextView[] txtTabMsgCounts;
     private String[] tabString = {"首页", "加气站","积分", "我"};
     private int[] tabIconResources = {R.drawable.tab_index_btn001_selector, R.drawable.tab_index_btn002_selector,

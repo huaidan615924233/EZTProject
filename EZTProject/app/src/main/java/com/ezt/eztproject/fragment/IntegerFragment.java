@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import com.ezt.eztproject.EZTBaseFragment;
 import com.ezt.eztproject.R;
@@ -13,9 +14,10 @@ import com.ezt.eztproject.R;
  * Created by Sunshine on 2017/7/31.
  */
 
-public class IntegerFragment extends EZTBaseFragment {
+public class IntegerFragment extends EZTBaseFragment implements View.OnClickListener{
     @Override
     protected void initView() {
+
     }
 
     @Override
@@ -43,6 +45,11 @@ public class IntegerFragment extends EZTBaseFragment {
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+
+    }
+
+    @Override
+    public void onClick(View v) {
 
     }
 }
