@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@id/coupons_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/inc_dp_5"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/inc_dp_5"
+            android:layout_marginRight="@dimen/inc_dp_5"
+            android:background="@drawable/bk_ticket2"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/inc_dp_10"
+            android:paddingLeft="@dimen/inc_dp_20">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@id/e_coupons_price_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/inc_dp_20"
+                    android:text="@string/e_money_icon"
+                    android:textColor="@color/e_login_btn_bg"
+                    android:textSize="@dimen/inc_dp_12" />
+
+                <TextView
+                    android:id="@id/a_t_coupons_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:paddingTop="@dimen/inc_dp_10"
+                    android:text="30"
+                    android:textColor="@color/e_login_btn_bg"
+                    android:textSize="@dimen/inc_dp_47" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="@dimen/inc_dp_5"
+                android:layout_marginRight="@dimen/inc_dp_5"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/inc_dp_20">
+
+                <TextView
+                    android:id="@id/a_t_coupons_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/inc_dp_20"
+                    android:text="@string/e_coupons_content"
+                    android:textColor="@color/e_yhq_text_c"
+                    android:textSize="@dimen/inc_dp_16" />
+
+                <TextView
+                    android:id="@id/a_t_coupons_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:text="@string/e_coupons_desc"
+                    android:textColor="@color/inc_prompt"
+                    android:textSize="@dimen/inc_dp_12" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/a_t_coupons_validate_pre"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/inc_dp_5"
+            android:layout_marginRight="@dimen/inc_dp_5"
+            android:background="@drawable/bk_ticket_b"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/inc_dp_20">
+
+            <TextView
+                android:id="@id/a_t_coupons_validate"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/inc_dp_45"
+                android:gravity="center_vertical"
+                android:text="@string/coupons_validate_text"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -14,8 +14,10 @@ import com.ezt.eztproject.fragment.IntegerFragment;
 import com.ezt.eztproject.fragment.MainFragment;
 import com.ezt.eztproject.fragment.MineFragment;
 import com.ezt.eztproject.fragment.StationFragment;
+import com.ezt.eztproject.view.TopBar;
 
 public class MainActivity extends FragmentActivity {
+    private TopBar titleBar;
     public FragmentTabHost mTabHost;
     private TextView[] txtTabMsgCounts;
     private String[] tabString = {"首页", "加气站","积分", "我"};
@@ -27,6 +29,8 @@ public class MainActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        titleBar = (TopBar)findViewById(R.id.title_bar);
+        titleBar.setBackVisibility(View.INVISIBLE);
         mTabHost = (FragmentTabHost) findViewById(android.R.id.tabhost);
         mTabHost.setup(this, getSupportFragmentManager(), R.id.content);
         txtTabMsgCounts = new TextView[tabFragment.length];

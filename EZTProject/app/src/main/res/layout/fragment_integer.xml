@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/e_act_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@color/bg_my_point"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="5.0dip"
+        android:paddingLeft="@dimen/inc_dp_10"
+        android:paddingTop="@dimen/inc_dp_5">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_integration"
+            android:drawablePadding="@dimen/inc_dp_5"
+            android:text="我的积分"
+            android:textColor="@color/inc_black"
+            android:textSize="@dimen/inc_dp_14" />
+
+        <TextView
+            android:id="@id/my_sroce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5.0dip"
+            android:textColor="@color/e_p_price"
+            android:textSize="@dimen/inc_dp_14" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="3.0dip"
+        android:background="@color/e_p_price" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@id/category_pre"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:id="@id/category_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/shape_pd_cate"
+                android:drawablePadding="5.0dip"
+                android:gravity="center"
+                android:text="商品分类"
+                android:textColor="@drawable/shape_pd_tx"
+                android:textSize="@dimen/inc_dp_14" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="@dimen/inc_dp_0_5"
+            android:layout_height="fill_parent"
+            android:background="@color/e_a_spl" />
+
+        <RelativeLayout
+            android:id="@id/category_wf_pre"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:id="@id/category_wf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5.0dip"
+                android:drawableLeft="@drawable/shape_pd_fw"
+                android:drawablePadding="5.0dip"
+                android:gravity="center"
+                android:text="积分范围"
+                android:textColor="@drawable/shape_pd_tx"
+                android:textSize="@dimen/inc_dp_14" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/inc_dp_0_5"
+        android:background="@color/e_a_spl" />
+
+    <FrameLayout
+        android:id="@id/list_pre"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0">
+
+        <ListView
+            android:id="@+id/mListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ListView>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@id/car_list_null"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/inc_dp_100"
+        android:drawablePadding="@dimen/inc_dp_2"
+        android:drawableTop="@drawable/ic_xiaofei"
+        android:gravity="center"
+        android:text="@string/e_no_product"
+        android:textColor="@color/e_login_text_hint"
+        android:textSize="@dimen/inc_dp_16"
+        android:visibility="gone" />
+</LinearLayout>

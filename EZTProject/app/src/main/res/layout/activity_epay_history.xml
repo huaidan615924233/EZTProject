@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/e_act_bg"
+    android:orientation="vertical">
+
+    <com.ezt.eztproject.view.TopBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"></com.ezt.eztproject.view.TopBar>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/e_index_top_bg"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/inc_dp_20"
+        android:paddingTop="@dimen/inc_dp_20">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@id/epay_check_time"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/inc_dp_40"
+                android:layout_marginLeft="@dimen/inc_dp_10"
+                android:background="@drawable/bk_date"
+                android:paddingBottom="5.0dip"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip"
+                android:paddingTop="5.0dip">
+
+                <ImageView
+                    android:id="@id/check_time_dl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_date" />
+
+                <TextView
+                    style="@style/index_top_edu_text"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_toRightOf="@id/check_time_dl"
+                    android:text="@string/e_text_check_time"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/inc_dp_16" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@id/btn_check_history"
+            android:layout_width="@dimen/inc_dp_60"
+            android:layout_height="40.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/inc_dp_20"
+            android:background="@drawable/shape_epay_btn"
+            android:text="@string/e_text_check_str"
+            android:textColor="@color/inc_item_background"
+            android:textSize="@dimen/inc_dp_15" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@id/epay_history_pre"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@id/epay_history_null"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/inc_dp_100"
+            android:drawablePadding="@dimen/inc_dp_2"
+            android:drawableTop="@drawable/ic_xiaofei"
+            android:gravity="center"
+            android:text="@string/null_his_pay"
+            android:textColor="@color/e_login_text_hint"
+            android:textSize="@dimen/inc_dp_16"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@id/list_pre"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

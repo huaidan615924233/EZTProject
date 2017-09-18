@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/e_act_bg"
+    android:orientation="vertical">
+
+    <com.ezt.eztproject.view.TopBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+    </com.ezt.eztproject.view.TopBar>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="@dimen/inc_dp_5"
+        android:layout_marginRight="@dimen/inc_dp_5"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/inc_dp_5"
+            android:layout_marginRight="@dimen/inc_dp_5"
+            android:layout_marginTop="@dimen/inc_dp_30"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/inc_dp_50"
+                android:text="@string/e_car_info_number"
+                android:textColor="@color/inc_black"
+                android:textSize="@dimen/inc_dp_16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/inc_dp_5"
+                android:text="@string/e_c_info_need"
+                android:textColor="@color/e_need_text"
+                android:textSize="@dimen/inc_dp_14" />
+
+            <EditText
+                android:id="@id/edit_car_number"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/inc_dp_40"
+                android:layout_marginLeft="@dimen/inc_dp_20"
+                android:background="@drawable/btn_sre_normal"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:paddingLeft="2.0dip"
+                android:singleLine="true"
+                android:textColor="@color/inc_prompt"
+                android:textColorHint="@color/inc_prompt"
+                android:textSize="@dimen/inc_sp_17" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/inc_dp_5"
+            android:layout_marginRight="@dimen/inc_dp_5"
+            android:layout_marginTop="@dimen/inc_dp_20"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40.0dip"
+                android:gravity="center_vertical"
+                android:minWidth="@dimen/inc_dp_50"
+                android:text="@string/e_car_info_name"
+                android:textColor="@color/inc_black"
+                android:textSize="@dimen/inc_dp_16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/inc_dp_5"
+                android:text=" "
+                android:textColor="@color/e_need_text"
+                android:textSize="@dimen/inc_dp_14" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/inc_dp_20"
+                android:background="@drawable/btn_sre_normal"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@id/spinner_info_car_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dialog"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@id/info_car_name_pre"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:background="@drawable/bk_date">
+
+                    <TextView
+                        android:id="@id/info_car_name_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:hint="@string/e_hint_select_car_name"
+                        android:textColor="@color/yulequan_item_uname"
+                        android:textSize="@dimen/inc_dp_16" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/inc_dp_5"
+            android:layout_marginRight="@dimen/inc_dp_5"
+            android:layout_marginTop="@dimen/inc_dp_20"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40.0dip"
+                android:gravity="center_vertical"
+                android:minWidth="@dimen/inc_dp_50"
+                android:text="@string/e_car_info_type"
+                android:textColor="@color/inc_black"
+                android:textSize="@dimen/inc_dp_16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/inc_dp_5"
+                android:text=" "
+                android:textColor="@color/e_need_text"
+                android:textSize="@dimen/inc_dp_14" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/inc_dp_20"
+                android:background="@drawable/btn_sre_normal"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@id/spinner_info_car_type"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/e_hint_select_car_type"
+                    android:spinnerMode="dialog"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@id/info_car_type_pre"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:background="@drawable/bk_date">
+
+                    <TextView
+                        android:id="@id/info_car_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:hint="@string/e_hint_select_car_type"
+                        android:textColor="@color/yulequan_item_uname"
+                        android:textSize="@dimen/inc_dp_16" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/inc_dp_5"
+            android:layout_marginRight="@dimen/inc_dp_5"
+            android:layout_marginTop="@dimen/inc_dp_20"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40.0dip"
+                android:gravity="center_vertical"
+                android:minWidth="@dimen/inc_dp_50"
+                android:text="@string/e_car_info_km_number"
+                android:textColor="@color/inc_black"
+                android:textSize="@dimen/inc_dp_16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/inc_dp_5"
+                android:text=" "
+                android:textColor="@color/e_need_text"
+                android:textSize="@dimen/inc_dp_14" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/inc_dp_20"
+                android:background="@drawable/btn_sre_normal"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@id/spinner_info_car_mili"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dialog"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@id/epay_check_type1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:background="@drawable/bk_date">
+
+                    <TextView
+                        android:id="@id/check_type1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:hint="@string/e_hint_select_car_kl"
+                        android:textColor="@color/yulequan_item_uname"
+                        android:textSize="@dimen/inc_dp_16" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@id/addcar_btn_complete"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/inc_dp_45"
+            android:layout_marginBottom="@dimen/inc_dp_20"
+            android:layout_marginLeft="@dimen/inc_dp_20"
+            android:layout_marginRight="@dimen/inc_dp_20"
+            android:layout_marginTop="@dimen/inc_dp_30"
+            android:background="@drawable/e_shape_commplete"
+            android:text="@string/finish"
+            android:textColor="@color/inc_item_background" />
+    </LinearLayout>
+</LinearLayout>

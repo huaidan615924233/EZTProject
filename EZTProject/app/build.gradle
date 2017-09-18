@@ -5,16 +5,31 @@ android {
     buildToolsVersion "26.0.1"
     defaultConfig {
         applicationId "com.ezt.eztproject"
-        minSdkVersion 17
+        minSdkVersion 19
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                //这里指定需要统一的依赖版本,这里统一为26.0.0-alpha1
+                details.useVersion '25.3.1'
+            }
         }
     }
 }
@@ -27,5 +42,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.android.support:design:23.1.1'
     testCompile 'junit:junit:4.12'
 }

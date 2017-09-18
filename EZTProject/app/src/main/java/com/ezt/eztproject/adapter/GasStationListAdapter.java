@@ -31,6 +31,7 @@ public class GasStationListAdapter extends EZTBaseAdapter<GasStationInfo> {
             holder.gasStationName = (TextView)convertView.findViewById(R.id.a_gasstion_info_name);
             holder.gasStationTel = (TextView)convertView.findViewById(R.id.e_gas_phone);
             holder.gasStationAddress = (TextView)convertView.findViewById(R.id.e_gas_address);
+            holder.gasStationGoto = (ImageButton)convertView.findViewById(R.id.e_gas_goto);
             convertView.setTag(holder);
         } else{
             holder = (ViewHolder) convertView.getTag();

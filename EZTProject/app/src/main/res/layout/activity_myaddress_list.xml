@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/e_act_bg"
+    android:orientation="vertical" >
+
+    <com.ezt.eztproject.view.TopBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+    </com.ezt.eztproject.view.TopBar>
+
+    <ListView
+        android:id="@id/receiptaddresslist"
+        style="@style/nomal_list_style"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_bar"
+        android:divider="@null"
+        android:scrollbars="none" />
+
+    <Button
+        android:id="@id/create_address"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/inc_dp_45"
+        android:layout_below="@id/receiptaddresslist"
+        android:layout_marginLeft="@dimen/inc_dp_20"
+        android:layout_marginRight="@dimen/inc_dp_20"
+        android:layout_marginTop="@dimen/inc_dp_20"
+        android:background="@drawable/e_shape_commplete"
+        android:text="@string/create_address"
+        android:textColor="@color/inc_item_background"
+        android:textSize="@dimen/inc_dp_14"/>
+
+    <TextView
+        android:id="@+id/no_data_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/inc_dp_2"
+        android:layout_centerInParent="true"
+        android:drawableTop="@mipmap/ic_xiaofei"
+        android:gravity="center"
+        android:text="@string/null_his_receip"
+        android:textColor="@color/e_login_text_hint"
+        android:textSize="@dimen/inc_dp_16"
+        android:visibility="gone" />
+
+</RelativeLayout>

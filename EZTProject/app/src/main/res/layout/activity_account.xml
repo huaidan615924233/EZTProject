@@ -3,22 +3,24 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@color/e_act_bg"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
-    <include
-        android:id="@id/e_action_bar"
-        layout="@layout/e_main_actionbar_new" />
-
+    <com.ezt.eztproject.view.TopBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+    </com.ezt.eztproject.view.TopBar>
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
-        android:scrollbars="none" >
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <View
                 android:layout_width="fill_parent"
@@ -29,13 +31,13 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_marginTop="@dimen/inc_dp_10"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/inc_item_background"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <View
                         android:layout_width="fill_parent"
@@ -43,9 +45,9 @@
                         android:background="@color/inc_complete_line" />
 
                     <RelativeLayout
-                        android:id="@id/pre_inv"
+                        android:id="@+id/confirm_identity_rl"
                         android:layout_width="fill_parent"
-                        android:layout_height="@dimen/inc_dp_44" >
+                        android:layout_height="@dimen/inc_dp_44">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -86,9 +88,9 @@
                         android:background="@color/inc_complete_line" />
 
                     <RelativeLayout
-                        android:id="@id/me_rela_2"
+                        android:id="@+id/find_safepass_rl"
                         android:layout_width="fill_parent"
-                        android:layout_height="@dimen/inc_dp_44" >
+                        android:layout_height="@dimen/inc_dp_44">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -131,9 +133,9 @@
                         android:background="@color/inc_complete_line" />
 
                     <RelativeLayout
-                        android:id="@id/me_rela_1"
+                        android:id="@+id/my_address_rl"
                         android:layout_width="fill_parent"
-                        android:layout_height="@dimen/inc_dp_44" >
+                        android:layout_height="@dimen/inc_dp_44">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -164,7 +166,7 @@
                     <RelativeLayout
                         android:id="@id/pre_change_phone"
                         android:layout_width="fill_parent"
-                        android:layout_height="@dimen/inc_dp_44" >
+                        android:layout_height="@dimen/inc_dp_44">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -197,7 +199,7 @@
                         android:id="@id/me_rela_refund"
                         android:layout_width="fill_parent"
                         android:layout_height="@dimen/inc_dp_44"
-                        android:visibility="gone" >
+                        android:visibility="gone">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -230,7 +232,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/inc_dp_10"
                     android:background="@color/inc_item_background"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <View
                         android:id="@id/me_rela_refund_splite"
@@ -239,9 +241,9 @@
                         android:background="@color/inc_complete_line" />
 
                     <RelativeLayout
-                        android:id="@id/me_rela_3"
+                        android:id="@+id/about_us_rl"
                         android:layout_width="fill_parent"
-                        android:layout_height="@dimen/inc_dp_44" >
+                        android:layout_height="@dimen/inc_dp_44">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -272,7 +274,7 @@
                     <RelativeLayout
                         android:id="@id/me_feedback_pre"
                         android:layout_width="fill_parent"
-                        android:layout_height="@dimen/inc_dp_44" >
+                        android:layout_height="@dimen/inc_dp_44">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -303,7 +305,7 @@
                     <RelativeLayout
                         android:id="@id/check_version_pre"
                         android:layout_width="fill_parent"
-                        android:layout_height="@dimen/inc_dp_44" >
+                        android:layout_height="@dimen/inc_dp_44">
 
                         <TextView
                             android:layout_width="wrap_content"

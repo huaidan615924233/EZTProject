@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/e_act_bg">
+
+    <com.ezt.eztproject.view.TopBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"></com.ezt.eztproject.view.TopBar>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/inc_dp_15"
+        android:layout_marginRight="@dimen/inc_dp_15"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/e_yellow"
+            android:gravity="center_vertical"
+            android:minWidth="@dimen/inc_dp_80"
+            android:padding="5.0dip"
+            android:text="@string/e_security_question_hint"
+            android:textColor="@color/e_red"
+            android:textSize="@dimen/inc_dp_16" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/inc_dp_10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:minWidth="@dimen/inc_dp_80"
+                android:text="@string/e_security_question"
+                android:textColor="@color/inc_black"
+                android:textSize="@dimen/inc_dp_16" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/inc_dp_20"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@id/qestion_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="@dimen/inc_dp_16" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@id/edit_old_pass"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/inc_dp_40"
+                android:layout_marginLeft="@dimen/inc_dp_20"
+                android:background="@drawable/shape_border_write_san"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="请输入您的安全密码"
+                android:inputType="numberPassword"
+                android:maxLength="6"
+                android:paddingLeft="2.0dip"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/inc_prompt"
+                android:textSize="@dimen/inc_sp_17"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/inc_dp_10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/inc_dp_80"
+                android:text="答案"
+                android:textColor="@color/inc_black"
+                android:textSize="@dimen/inc_dp_16" />
+
+            <EditText
+                android:id="@id/edit_new_anser"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/inc_dp_40"
+                android:layout_marginLeft="@dimen/inc_dp_20"
+                android:background="@drawable/shape_border_write_san"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="请输入安全问题答案"
+                android:paddingLeft="2.0dip"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/inc_prompt"
+                android:textSize="@dimen/inc_sp_17" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@id/tx_forgot_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="@dimen/inc_dp_10"
+            android:minWidth="@dimen/inc_dp_80"
+            android:text="@string/e_forgot_pass_hint"
+            android:textColor="@color/e_a_order"
+            android:textSize="@dimen/inc_dp_14" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/inc_dp_0_5"
+            android:layout_marginTop="@dimen/inc_dp_7"
+            android:background="@color/inc_complete_line" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/inc_dp_15"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/inc_dp_80"
+                android:text="输入密码"
+                android:textColor="@color/inc_black"
+                android:textSize="@dimen/inc_dp_16" />
+
+            <EditText
+                android:id="@id/edit_set_pass"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/inc_dp_40"
+                android:layout_marginLeft="@dimen/inc_dp_20"
+                android:background="@drawable/shape_border_write_san"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="请输入6位数字密码"
+                android:inputType="textPassword"
+                android:maxLength="6"
+                android:paddingLeft="2.0dip"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/inc_prompt"
+                android:textSize="@dimen/inc_sp_17" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/inc_dp_15"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/inc_dp_80"
+                android:text="@string/e_confrom_pass"
+                android:textColor="@color/inc_black"
+                android:textSize="@dimen/inc_dp_16" />
+
+            <EditText
+                android:id="@id/edit_set_re_pass"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/inc_dp_40"
+                android:layout_marginLeft="@dimen/inc_dp_20"
+                android:background="@drawable/shape_border_write_san"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="再次输入6位数字密码"
+                android:inputType="textPassword"
+                android:maxLength="6"
+                android:paddingLeft="2.0dip"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/inc_prompt"
+                android:textSize="@dimen/inc_sp_17" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/inc_dp_0_5"
+            android:layout_marginTop="10.0dip"
+            android:background="@color/inc_complete_line" />
+
+        <RelativeLayout
+            android:id="@id/register_parent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/inc_dp_15"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@id/tx_sms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:minWidth="@dimen/inc_dp_80"
+                android:text="@string/e_sms_vcode"
+                android:textColor="@color/inc_black"
+                android:textSize="@dimen/inc_dp_16" />
+
+            <TextView
+                android:id="@id/login_getvcode"
+                android:layout_width="@dimen/inc_dp_80"
+                android:layout_height="@dimen/inc_dp_40"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/shape_change_phone"
+                android:gravity="center"
+                android:text="@string/e_get_phone"
+                android:textColor="@color/shape_pass_tx" />
+
+            <EditText
+                android:id="@id/edit_sms_vcode"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/inc_dp_40"
+                android:layout_marginLeft="@dimen/inc_dp_20"
+                android:layout_marginRight="@dimen/inc_dp_5"
+                android:layout_toLeftOf="@id/login_getvcode"
+                android:layout_toRightOf="@id/tx_sms"
+                android:background="@drawable/shape_border_write_san"
+                android:hint="请查收短信"
+                android:inputType="number"
+                android:maxLength="6"
+                android:textColorHint="@color/e_login_text_hint" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@id/btn_complete"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/inc_dp_45"
+            android:layout_marginBottom="@dimen/inc_dp_20"
+            android:layout_marginTop="@dimen/inc_dp_15"
+            android:background="@drawable/e_shape_commplete"
+            android:gravity="center"
+            android:text="完成"
+            android:textColor="@color/inc_item_background" />
+    </LinearLayout>
+</RelativeLayout>

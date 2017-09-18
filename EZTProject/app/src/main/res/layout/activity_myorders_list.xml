@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/e_act_bg"
+    android:orientation="vertical" >
+
+    <com.ezt.eztproject.view.TopBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+    </com.ezt.eztproject.view.TopBar>
+
+    <ListView
+        android:id="@+id/myorder_list_lv"
+        style="@style/nomal_list_style"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_bar"
+        android:divider="@null"
+        android:scrollbars="none" />
+
+
+    <TextView
+        android:id="@+id/no_data_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/inc_dp_2"
+        android:layout_centerInParent="true"
+        android:drawableTop="@mipmap/ic_xiaofei"
+        android:gravity="center"
+        android:text="暂无订单"
+        android:textColor="@color/e_login_text_hint"
+        android:textSize="@dimen/inc_dp_16"
+        android:visibility="gone" />
+
+</RelativeLayout>

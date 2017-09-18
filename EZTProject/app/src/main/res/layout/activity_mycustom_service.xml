@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/e_act_bg">
+
+    <com.ezt.eztproject.view.TopBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+    </com.ezt.eztproject.view.TopBar>
+
+    <Button
+        android:id="@id/btn_complete"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/inc_dp_45"
+        android:layout_marginBottom="@dimen/inc_dp_20"
+        android:layout_marginTop="@dimen/inc_dp_30"
+        android:layout_centerInParent="true"
+        android:background="@drawable/e_shape_commplete"
+        android:gravity="center"
+        android:text="我的专属客服"
+        android:textColor="@color/inc_item_background" />
+</RelativeLayout>

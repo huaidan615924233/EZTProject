@@ -7,7 +7,7 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/inc_dp_100"
+        android:layout_centerVertical="true"
         android:orientation="vertical" >
 
         <ImageView
@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="@dimen/inc_dp_40"
-            android:src="@drawable/e_logo1" />
+            android:src="@mipmap/e_logo1" />
 
         <include layout="@layout/e_line_horizontal" />
 

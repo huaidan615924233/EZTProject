@@ -150,7 +150,7 @@
     <string name="abc_activity_chooser_view_see_all">See all</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_shareactionprovider_share_with">Share with</string>
-    <string name="app_name">E站途</string>
+    <string name="app_name">EZT加气站</string>
     <string name="inc_err_net_toast">网络不稳定或未联网，请重试！</string>
     <string name="inc_load_error">网络不稳定或未联网，请重试！</string>
     <string name="inc_start_yoga">Try Us Out</string>

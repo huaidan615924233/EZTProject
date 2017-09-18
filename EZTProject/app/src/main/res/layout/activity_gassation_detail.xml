@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/inc_item_background"
+    android:orientation="vertical">
+
+    <com.ezt.eztproject.view.TopBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"></com.ezt.eztproject.view.TopBar>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_bar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/inc_dp_100"
+                android:background="@drawable/e_index_top_bg">
+
+                <TextView
+                    android:id="@id/a_gasstion_info_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/inc_dp_20"
+                    android:drawableLeft="@drawable/ic_gas2"
+                    android:drawablePadding="@dimen/inc_dp_10"
+                    android:gravity="center_vertical"
+                    android:text="加气站"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/inc_dp_20" />
+
+                <TextView
+                    android:id="@id/a_gasstion_is_open"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/inc_dp_5"
+                    android:layout_toRightOf="@id/a_gasstion_info_name"
+                    android:background="@drawable/shape_gasstation_state"
+                    android:padding="2.0dip"
+                    android:text="暂停营业"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/inc_dp_12"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/inc_dp_10"
+                android:layout_marginTop="@dimen/inc_dp_10"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/inc_dp_10">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/inc_dp_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@id/e_gas_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_gravity="center_vertical"
+                        android:drawableLeft="@drawable/ic_phone2"
+                        android:drawablePadding="@dimen/inc_dp_10"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/inc_black"
+                        android:textSize="@dimen/inc_dp_16" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/inc_dp_0_5"
+                    android:layout_marginTop="@dimen/inc_dp_10"
+                    android:background="@color/page_content" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/inc_dp_10"
+                    android:descendantFocusability="blocksDescendants"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@id/e_gas_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_gravity="center_vertical"
+                        android:paddingTop="@dimen/inc_dp_15"
+                        android:layout_marginRight="80.0dip"
+                        android:drawableLeft="@drawable/ic_add2"
+                        android:drawablePadding="@dimen/inc_dp_10"
+                        android:gravity="center"
+                        android:textColor="@color/inc_black"
+                        android:textSize="@dimen/inc_dp_16" />
+
+                    <TextView
+                        android:id="@id/e_gas_goto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5.0dip"
+                        android:drawableLeft="@drawable/btn_way_normal_d"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:text="@string/go_there"
+                        android:textColor="@color/e_go_there"
+                        android:textSize="@dimen/inc_dp_16" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/inc_dp_0_5"
+                android:layout_marginTop="@dimen/inc_dp_5"
+                android:background="@color/inc_complete_line" />
+
+            <LinearLayout
+                android:id="@id/service_line"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/inc_dp_8"
+                    android:background="@color/inc_gray_background" />
+
+                <TextView
+                    android:id="@id/service_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/inc_dp_10"
+                    android:layout_marginTop="10.0dip"
+                    android:text="@string/gation_detail_service_hint"
+                    android:textColor="@color/gastion_item_service_hint_tc"
+                    android:textSize="@dimen/inc_dp_16" />
+            </LinearLayout>
+            <com.ezt.eztproject.view.FixedGridView
+                android:id="@+id/servicesGV"
+                style="@style/nomal_list_style"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5.0dip"
+                android:background="@color/white"
+                android:numColumns="4" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

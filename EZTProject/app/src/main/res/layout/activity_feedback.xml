@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/e_act_bg"
+    android:orientation="vertical">
+
+    <com.ezt.eztproject.view.TopBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+    </com.ezt.eztproject.view.TopBar>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/inc_dp_20"
+            android:layout_marginRight="@dimen/inc_dp_20"
+            android:layout_marginTop="@dimen/inc_dp_20"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@id/edit_feedback"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/btn_sre_normal"
+                android:ellipsize="end"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:minLines="6"
+                android:paddingLeft="2.0dip"
+                android:textColor="@color/inc_prompt"
+                android:textColorHint="@color/inc_prompt"
+                android:textSize="@dimen/inc_sp_17" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:minWidth="@dimen/inc_dp_80"
+                android:text="@string/e_feedback_hint"
+                android:textColor="@color/inc_black"
+                android:textSize="@dimen/inc_dp_16" />
+
+            <Button
+                android:id="@id/btn_complete"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/inc_dp_45"
+                android:layout_marginBottom="@dimen/inc_dp_20"
+                android:layout_marginTop="@dimen/inc_dp_30"
+                android:background="@drawable/e_shape_commplete"
+                android:text="@string/finish"
+                android:textColor="@color/inc_item_background" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

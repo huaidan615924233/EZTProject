@@ -3,6 +3,15 @@
     package="com.ezt.eztproject">
 
     <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".MyApplication"
@@ -11,16 +20,67 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name="com.ezt.eztproject.MainActivity">
+        android:theme="@style/AppTheme">
+        <activity android:name="com.ezt.eztproject.MainActivity"></activity>
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+            <!-- QQ和QQ空间分享 QQ登录的回调必须要配置的 -->
+            <intent-filter>
+                <data android:scheme="tencent100371282" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- 新浪微博客户端分享回调必须配置 -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name="com.ezt.eztproject.activity.AccountActivity"></activity>
+        <activity android:name="com.ezt.eztproject.activity.ScanActivity"></activity>
+        <activity android:name="com.ezt.eztproject.activity.PersonalCarListActivity"></activity>
+        <activity android:name="com.ezt.eztproject.activity.AddCarActivity"></activity>
+        <activity android:name="com.ezt.eztproject.activity.RechargeActivity"></activity>
+        <activity android:name="com.ezt.eztproject.activity.FeedBackActivity"></activity>
+        <activity android:name="com.ezt.eztproject.activity.RechargeHistoryActivity"></activity>
+        <activity android:name="com.ezt.eztproject.activity.SetSafeActivity"></activity>
+        <activity android:name="com.ezt.eztproject.activity.FindSafePassActivity"></activity>
+        <activity android:name="com.ezt.eztproject.activity.ChangePhoneActivity"></activity>
+        <activity android:name="com.ezt.eztproject.activity.AboutActivity"></activity>
+        <activity android:name="com.ezt.eztproject.activity.CompletInfoActivity"></activity>
+        <activity android:name="com.ezt.eztproject.activity.VerfityActivity"></activity>
+        <activity android:name="com.ezt.eztproject.activity.PayHistoryActivity"></activity>
+        <activity android:name="com.ezt.eztproject.activity.PersonalAddressActivity"></activity>
+        <activity android:name="com.ezt.eztproject.activity.AddAddressActivity"></activity>
+        <activity android:name="com.ezt.eztproject.activity.PersonalCustomServiceActivity"></activity>
+        <activity android:name="com.ezt.eztproject.activity.PersonalOrdersActivity"></activity>
+        <activity android:name="com.ezt.eztproject.activity.NewsActivity"></activity>
+        <activity android:name="com.ezt.eztproject.activity.GasSationDetailActivity"></activity>
+        <activity android:name="com.ezt.eztproject.activity.PersonalEasePayActivity"></activity>
+        <activity android:name="com.ezt.eztproject.activity.IntegerProductDetailActivity"></activity>
+        <activity android:name="com.ezt.eztproject.activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.ezt.eztproject.activity.AccountActivity"></activity>
-        <activity android:name="com.ezt.eztproject.activity.ScanActivity"></activity>
     </application>
 
 </manifest>

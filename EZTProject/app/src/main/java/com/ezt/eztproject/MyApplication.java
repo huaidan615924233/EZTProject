@@ -11,6 +11,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.WeakHashMap;
 
+import cn.sharesdk.framework.ShareSDK;
+
 /**
  * 初始化
  */
@@ -38,6 +40,7 @@ public class MyApplication extends Application {
 		if (mInstance == null) {
 			mInstance = this;
 		}
+		ShareSDK.initSDK(this);
 	}
 
 	/**

@@ -1,14 +1,17 @@
 package com.ezt.eztproject.fragment;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.ezt.eztproject.EZTBaseFragment;
 import com.ezt.eztproject.R;
+import com.ezt.eztproject.activity.GasSationDetailActivity;
 import com.ezt.eztproject.adapter.GasStationListAdapter;
 import com.ezt.eztproject.bean.GasStationInfo;
 
@@ -64,7 +67,18 @@ public class StationFragment extends EZTBaseFragment {
 
     @Override
     protected void setListener() {
-
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                GasStationInfo info = data.get(position);
+                Intent intent = new Intent();
+                intent.setClass(mContext, GasSationDetailActivity.class);
+                intent.putExtra("stationName",info.getName());
+                intent.putExtra("stationTel",info.getTel());
+                intent.putExtra("stationAddress",info.getAddress());
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

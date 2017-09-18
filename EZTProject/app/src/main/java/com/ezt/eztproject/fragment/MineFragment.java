@@ -6,23 +6,30 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
 import com.ezt.eztproject.EZTBaseFragment;
 import com.ezt.eztproject.R;
 import com.ezt.eztproject.activity.AccountActivity;
+import com.ezt.eztproject.activity.PersonalCustomServiceActivity;
+import com.ezt.eztproject.activity.PersonalEasePayActivity;
+import com.ezt.eztproject.activity.PersonalOrdersActivity;
+import com.ezt.eztproject.activity.PersonalCarListActivity;
 
 /**
  * Created by Sunshine on 2017/7/31.
  */
 
-public class MineFragment extends EZTBaseFragment {
-    private RelativeLayout accountManager;
+public class MineFragment extends EZTBaseFragment implements View.OnClickListener {
+    private RelativeLayout accountManager,myCars,myOrders,myEasePay,myService;
 
     @Override
     protected void initView() {
         accountManager = (RelativeLayout) mView.findViewById(R.id.me_mange_account);
+        myCars = (RelativeLayout) mView.findViewById(R.id.mycars_rl);
+        myService = (RelativeLayout)mView.findViewById(R.id.myservice_rl);
+        myOrders = (RelativeLayout)mView.findViewById(R.id.myorder_rl);
+        myEasePay = (RelativeLayout)mView.findViewById(R.id.myeasepay_rl);
     }
 
     @Override
@@ -32,14 +39,11 @@ public class MineFragment extends EZTBaseFragment {
 
     @Override
     protected void setListener() {
-        accountManager.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent  = new Intent();
-                intent.setClass(mContext, AccountActivity.class);
-                startActivity(intent);
-            }
-        });
+        accountManager.setOnClickListener(this);
+        myCars.setOnClickListener(this);
+        myService.setOnClickListener(this);
+        myOrders.setOnClickListener(this);
+        myEasePay.setOnClickListener(this);
     }
 
     @Override
@@ -59,5 +63,35 @@ public class MineFragment extends EZTBaseFragment {
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
 
+    }
+
+    @Override
+    public void onClick(View v) {
+        Intent intent  = new Intent();
+        int id = v.getId();
+        switch (id){
+            case R.id.me_mange_account:
+                intent.setClass(mContext, AccountActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.mycars_rl:
+                intent.setClass(mContext, PersonalCarListActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.myservice_rl:
+                intent.setClass(mContext, PersonalCustomServiceActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.myorder_rl:
+                intent.setClass(mContext, PersonalOrdersActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.myeasepay_rl:
+                intent.setClass(mContext, PersonalEasePayActivity.class);
+                startActivity(intent);
+                break;
+            default:
+                break;
+        }
     }
 }
